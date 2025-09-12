@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Heaven</title>
+
+    <!--  daisy ui-->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font -->
+    <style>
+      .manrope-font {
+        font-family: "Manrope", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+    <!-- 
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #e63946;
+        --secondary-color: #f1faee;
+        --accent-color: #ffb703;
+        --dark-color: #1d3557;
+        --light-color: #a8dadc;
+      }
+    </style> -->
+  </head>
+  <body class=".manrope-font">
+    <header>
+      <div class="bg-green-50">
+        <div class="navbar shadow-sm">
+          <div class="navbar-start">
+            <!-- <div class="dropdown">
+                <ul
+                     tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                    <li><a>Item 1</a></li>
+                    <li><a>Item 2</a></li>
+                    <li><a>Item 3</a></li>
+                </ul>
+            </div> -->
+
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              >
+                <li><a>Menu</a></li>
+                <li><a>Order online</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+
+            <a class="md:text-3xl text-2xl font-bold"> Food Heaven</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a class="text-xl">Menu</a></li>
+              <li>
+                <a href="" class="text-xl">Order online</a>
+              </li>
+              <li><a class="text-xl">Contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <button
+              class="btn hover:bg-amber-500 bg-red-600 text-white rounded-full px-7"
+            >
+              Order Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- hero section -->
+      <div
+        class="bg-[url(./images/bg.png)] min-h-screen hero bg-cover bg-no-repeat w-full"
+      >
+        <div
+          class="hero-overlay bg-opacity-60 flex flex-col items-center justify-center"
+        >
+          <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-6xl mx-auto">
+              <h1 class="mb-5 text-3xl md:text-7xl font-bold text-white">
+                Your Favorite Food, Delivered Fast
+              </h1>
+              <p class="mb-5 text-gray-200 text-lg md:text-xl">
+                Get Fresh, Testy meals delivered right to your doorstep. Order
+                now <br />
+                and enjoy a delicious experience.
+              </p>
+              <button
+                class="btn bg-amber-600 text-white rounded-full border-none px-10"
+              >
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="bg-green-50">
+      <div class="text-center mb-12 pt-[120px]">
+        <h2
+          class="text-4xl md:text-5xl font-extrabold text-[var(--dark)] tracking-tight"
+        >
+          Our Menu
+        </h2>
+        <p class="mt-4 text-lg text-gray-600">
+          Fresh, fast, and flavorful. Find your new favorite meal.
+        </p>
+      </div>
+      <div
+        class="flex justify-center items-center gap-2 md:gap-5 border-b-1 border-gray-200"
+      >
+        <a
+          class="font-semibold text-xl md:hover:text-red-600 hover:text-blue-600 md:hover:underline"
+          href=""
+          >Set Menu</a
+        >
+        <a
+          class="font-semibold text-xl hover:text-red-600 hover:underline"
+          href=""
+          >Burgers</a
+        >
+        <a
+          class="font-semibold text-xl hover:text-red-600 hover:underline"
+          href=""
+          >Sides</a
+        >
+        <a
+          class="font-semibold text-xl hover:text-red-600 hover:underline"
+          href=""
+          >Drinks</a
+        >
+        <a
+          class="font-semibold text-xl hover:text-red-600 hover:underline"
+          href=""
+          >Dessert</a
+        >
+      </div>
+      <div class="">
+        <h2 class="border-l-3 border-red-600 font-bold text-2xl m-4 p-2">
+          Set Menu
+        </h2>
+
+        <a class="m-4 text-lg" href="#">See more...</a>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-3 m-4">
+          <img
+            src="./images/set-menu1.jpg"
+            alt=""
+            class="w-full h-56 object-cover rounded-lg"
+          />
+          <img
+            src="./images/set-menu4.jpg"
+            alt=""
+            class="w-full h-56 object-cover rounded-lg"
+          />
+          <img
+            src="./images/set-menu2.jpg"
+            alt=""
+            class="w-full h-56 object-cover rounded-lg"
+          />
+          <img
+            src="./images/set-menu3.jpg"
+            alt=""
+            class="w-full h-56 object-cover rounded-lg"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
