@@ -13,6 +13,14 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- font -->
     <style>
       .manrope-font {
@@ -33,7 +41,7 @@
       }
     </style> -->
   </head>
-  <body class=".manrope-font">
+  <body class=".manrope-font bg-green-50">
     <header>
       <div class="bg-green-50">
         <div class="navbar shadow-sm">
@@ -123,75 +131,384 @@
         </div>
       </div>
     </header>
-    <section class="bg-green-50">
-      <div class="text-center mb-12 pt-[120px]">
-        <h2
-          class="text-4xl md:text-5xl font-extrabold text-[var(--dark)] tracking-tight"
-        >
-          Our Menu
-        </h2>
-        <p class="mt-4 text-lg text-gray-600">
-          Fresh, fast, and flavorful. Find your new favorite meal.
-        </p>
-      </div>
-      <div
-        class="flex justify-center items-center gap-2 md:gap-5 border-b-1 border-gray-200"
-      >
-        <a
-          class="font-semibold text-xl md:hover:text-red-600 hover:text-blue-600 md:hover:underline"
-          href=""
-          >Set Menu</a
-        >
-        <a
-          class="font-semibold text-xl hover:text-red-600 hover:underline"
-          href=""
-          >Burgers</a
-        >
-        <a
-          class="font-semibold text-xl hover:text-red-600 hover:underline"
-          href=""
-          >Sides</a
-        >
-        <a
-          class="font-semibold text-xl hover:text-red-600 hover:underline"
-          href=""
-          >Drinks</a
-        >
-        <a
-          class="font-semibold text-xl hover:text-red-600 hover:underline"
-          href=""
-          >Dessert</a
-        >
-      </div>
-      <div class="">
-        <h2 class="border-l-3 border-red-600 font-bold text-2xl m-4 p-2">
-          Set Menu
-        </h2>
-
-        <a class="m-4 text-lg" href="#">See more...</a>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-3 m-4">
-          <img
-            src="./images/set-menu1.jpg"
-            alt=""
-            class="w-full h-56 object-cover rounded-lg"
-          />
-          <img
-            src="./images/set-menu4.jpg"
-            alt=""
-            class="w-full h-56 object-cover rounded-lg"
-          />
-          <img
-            src="./images/set-menu2.jpg"
-            alt=""
-            class="w-full h-56 object-cover rounded-lg"
-          />
-          <img
-            src="./images/set-menu3.jpg"
-            alt=""
-            class="w-full h-56 object-cover rounded-lg"
-          />
+    <main>
+      <section class="">
+        <div class="text-center mb-12 pt-[120px]">
+          <h2
+            class="text-4xl md:text-5xl font-extrabold text-[var(--dark)] tracking-tight"
+          >
+            Our Menu
+          </h2>
+          <p class="mt-4 text-lg text-gray-600">
+            Fresh, fast, and flavorful. Find your new favorite meal.
+          </p>
         </div>
-      </div>
-    </section>
+        <div
+          class="flex justify-center items-center gap-2 md:gap-5 border-b-1 border-gray-200"
+        >
+          <a
+            class="font-semibold text-xl md:hover:text-red-600 hover:text-blue-600 md:hover:underline"
+            href=""
+            >Set Menu</a
+          >
+          <a
+            class="font-semibold text-xl hover:text-red-600 hover:underline"
+            href=""
+            >Burgers</a
+          >
+          <a
+            class="font-semibold text-xl hover:text-red-600 hover:underline"
+            href=""
+            >Sides</a
+          >
+          <a
+            class="font-semibold text-xl hover:text-red-600 hover:underline"
+            href=""
+            >Drinks</a
+          >
+          <a
+            class="font-semibold text-xl hover:text-red-600 hover:underline"
+            href=""
+            >Dessert</a
+          >
+        </div>
+
+        <div>
+          <div class="container mt-10">
+            <h2 class="border-l-3 border-red-600 font-bold text-2xl mt-2 p-2">
+              Set Menu
+            </h2>
+
+            <a class="text-xl px-4 hover:underline" href="#">See more...</a>
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 gap-4 justify-between p-5"
+            >
+              <!-- 1st card -->
+              <div>
+                <div class="card bg-base-100 max-w-96 shadow-sm">
+                  <figure>
+                    <img src="./images/set-menu1.jpg" alt="menu" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title font-bold">Set Menu 1</h2>
+                    <p>
+                      Spaghetti with sauce, cheese, fried egg, and fresh salad.
+                    </p>
+                    <div class="card-actions justify-end">
+                      <p class="font-bold text-xl text-black">
+                        200<span>Tk</span>
+                      </p>
+                      <button
+                        class="btn bg-amber-500 font-semibold hover:text-white hover:bg-red-500"
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 2nd card -->
+              <div>
+                <div class="card bg-base-100 max-w-96 shadow-sm">
+                  <figure>
+                    <img src="./images/set-menu4.jpg" alt="menu" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title font-bold">Set Menu 2</h2>
+                    <p>
+                      Spaghetti with sauce, cheese, fried egg, and fresh salad.
+                    </p>
+                    <div class="card-actions justify-end">
+                      <p class="font-bold text-xl text-black">
+                        200<span>Tk</span>
+                      </p>
+                      <button
+                        class="btn bg-amber-500 font-semibold hover:text-white hover:bg-red-500"
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 3rd card -->
+              <div>
+                <div class="card bg-base-100 max-w-96 shadow-sm">
+                  <figure>
+                    <img src="./images/set-menu1.jpg" alt="menu" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title font-bold">Set Menu 3</h2>
+                    <p>
+                      Spaghetti with sauce, cheese, fried egg, and fresh salad.
+                    </p>
+                    <div class="card-actions justify-end">
+                      <p class="font-bold text-xl text-black">
+                        200<span>Tk</span>
+                      </p>
+                      <button
+                        class="btn bg-amber-500 font-semibold hover:text-white hover:bg-red-500"
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 4th card -->
+              <div>
+                <div class="card bg-base-100 max-w-96 shadow-sm">
+                  <figure>
+                    <img src="./images/set-menu1.jpg" alt="menu" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title font-bold">Set Menu 3</h2>
+                    <p>
+                      Spaghetti with sauce, cheese, fried egg, and fresh salad.
+                    </p>
+                    <div class="card-actions justify-end">
+                      <p class="font-bold text-xl text-black">
+                        200<span>Tk</span>
+                      </p>
+                      <button
+                        class="btn bg-amber-500 font-semibold hover:text-white hover:bg-red-500"
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- burger  -->
+        <div>
+          <div class="container">
+            <h2 class="border-l-3 border-red-600 font-bold text-2xl mt-2 p-2">
+              Burgers
+            </h2>
+
+            <a class="text-black text-xl px-4 hover:underline" href="#"
+              >See more...</a
+            >
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 gap-4 p-5"
+            >
+              <!-- 1st card -->
+              <div>
+                <div class="card bg-base-100 max-w-96 shadow-sm">
+                  <figure>
+                    <img src="./images/burger1.jpg" alt="burger1" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title font-bold">Student Burger</h2>
+                    <p>Juicy, flavorful burger made to satisfy every bite.</p>
+                    <div class="card-actions justify-end">
+                      <p class="font-bold text-xl text-black">
+                        120<span>Tk</span>
+                      </p>
+                      <button
+                        class="btn bg-amber-500 font-semibold hover:text-white hover:bg-red-500"
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 2nd card -->
+              <div>
+                <div class="card bg-base-100 max-w-96 shadow-sm">
+                  <figure>
+                    <img src="./images/burger2.jpg" alt="burger1" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title font-bold">Chicken Cheese Burger</h2>
+                    <p>Juicy, flavorful burger made to satisfy every bite.</p>
+                    <div class="card-actions justify-end">
+                      <p class="font-bold text-xl text-black">
+                        260<span>Tk</span>
+                      </p>
+                      <button
+                        class="btn bg-amber-500 font-semibold hover:text-white hover:bg-red-500"
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 3rd card -->
+              <div>
+                <div class="card bg-base-100 max-w-96 shadow-sm">
+                  <figure>
+                    <img src="./images/burger4.jpg" alt="burger1" />
+                  </figure>
+                  <div class="card-body">
+                    <h2 class="card-title font-bold">
+                      Beef Burger with french fries
+                    </h2>
+                    <p>Juicy, flavorful burger made to satisfy every bite.</p>
+                    <div class="card-actions justify-end">
+                      <p class="font-bold text-xl text-black">
+                        499<span>Tk</span>
+                      </p>
+                      <button
+                        class="btn bg-amber-500 font-semibold hover:text-white hover:bg-red-500"
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- review -->
+      <section class="">
+        <div>
+          <h1 class="text-black text-5xl flex justify-center items-center p-7">
+            What Our Client's say
+          </h1>
+        </div>
+        <div>
+          <a class="text-black text-xl px-4 hover:underline" href="#"
+            >See more</a
+          >
+        </div>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 gap-11 p-5"
+        >
+          <!-- card 1 -->
+          <div
+            class="w- h-auto p-4 rounded-lg bg-gradient-to-br from-emerald-100 via-white- to-Emerald-300 shadow-sm"
+          >
+            <div class="flex p-4">
+              <img src="./images/icon-star.png" alt="" />
+              <img src="./images/icon-star.png" alt="" />
+              <img src="./images/icon-star.png" alt="" />
+              <img src="./images/icon-star.png" alt="" />
+              <img src="./images/icon-star.png" alt="" />
+            </div>
+            <div class="flex flex-col gap-1 m-2">
+              <h2 class="text-2xl text-red-500 font-bold">Liked by Client</h2>
+              <p class="text-gray-500">
+                I like the burger most,<br />
+                I recommend this.
+              </p>
+            </div>
+            <div class="flex gap-3 items-center">
+              <img
+                class="rounded-full"
+                src="./images/avatar - Copy.png"
+                alt=""
+              />
+              <div class="">
+                <h2>Anvi Rahman</h2>
+                <p class="text-gray-400">22 March, 2025</p>
+              </div>
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div
+            class="w-full h-auto p-4 rounded-lg bg-gradient-to-br from-emerald-100 via-white- to-Emerald-300 shadow-sm"
+          >
+            <div class="flex p-4">
+              <img src="./images/icon-star.png" alt="" />
+              <img src="./images/icon-star.png" alt="" />
+              <img src="./images/icon-star.png" alt="" />
+              <img src="./images/icon-star.png" alt="" />
+              <img src="./images/icon-star.png" alt="" />
+            </div>
+            <div class="flex flex-col gap-1 m-2">
+              <h2 class="text-2xl text-red-500 font-bold">Liked by Client</h2>
+              <p class="text-gray-500">
+                I like the cappuccino most,<br />
+                I recommend this.
+              </p>
+            </div>
+            <div class="flex gap-3 items-center">
+              <img
+                class="rounded-full"
+                src="./images/avatar - Copy.png"
+                alt=""
+              />
+              <div class="">
+                <h2>Anvi Rahman</h2>
+                <p class="text-gray-400">22 March, 2025</p>
+              </div>
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div
+            class="w-full h-auto p-4 rounded-lg bg-gradient-to-br from-emerald-100 via-white- to-Emerald-300 shadow-sm"
+          >
+            <div class="flex p-4">
+              <img src="./images/icon-star.png" alt="" />
+              <img src="./images/icon-star.png" alt="" />
+              <img src="./images/icon-star.png" alt="" />
+              <img src="./images/icon-star.png" alt="" />
+              <img src="./images/icon-star.png" alt="" />
+            </div>
+            <div class="flex flex-col gap-1 m-2">
+              <h2 class="text-2xl text-red-500 font-bold">Liked by Client</h2>
+              <p class="text-gray-500">
+                I like the cappuccino most,<br />
+                I recommend this.
+              </p>
+            </div>
+            <div class="flex gap-3 items-center">
+              <img
+                class="rounded-full"
+                src="./images/avatar - Copy.png"
+                alt=""
+              />
+              <div class="">
+                <h2>Pushpa Talukder</h2>
+                <p class="text-gray-400">30 July, 2025</p>
+              </div>
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <!-- card 4 -->
+          <div
+            class="w-full h-auto p-4 rounded-lg bg-gradient-to-br from-emerald-100 via-white- to-Emerald-300 shadow-sm"
+          >
+            <div class="flex p-4">
+              <img src="./images/icon-star.png" alt="" />
+              <img src="./images/icon-star.png" alt="" />
+              <img src="./images/icon-star.png" alt="" />
+              <img src="./images/icon-star.png" alt="" />
+              <img src="./images/icon-star.png" alt="" />
+            </div>
+            <div class="flex flex-col gap-1 m-2">
+              <h2 class="text-2xl text-red-500 font-bold">Liked by Client</h2>
+              <p class="text-gray-500">
+                I like the cappuccino most,<br />
+                I recommend this.
+              </p>
+            </div>
+            <div class="flex gap-3 items-center">
+              <img
+                class="rounded-full"
+                src="./images/avatar - Copy.png"
+                alt=""
+              />
+              <div class="">
+                <h2>Lamiya Hossain</h2>
+                <p class="text-gray-400">22 May, 2025</p>
+              </div>
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
