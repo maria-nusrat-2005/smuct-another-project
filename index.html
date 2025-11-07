@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Heaven</title>
-
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/dish.png" type="image/x-icon" />
     <!--  daisy ui-->
 
     <link
@@ -21,6 +22,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script>
+      function showAlert() {
+        alert("Login/SignUp First");
+      }
+    </script>
     <!-- font -->
     <style>
       .manrope-font {
@@ -55,7 +61,8 @@
                     <li><a>Item 3</a></li>
                 </ul>
             </div> -->
-
+            <div></div>
+            <dialog></dialog>
             <div class="dropdown">
               <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
                 <svg
@@ -75,15 +82,28 @@
               </div>
               <ul
                 tabindex="0"
-                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                class="flex flex-col gap-2 menu menu-sm dropdown-content bg-yellow-50 rounded-box z-1 mt-3 w-52 p-2 shadow"
               >
-                <li><a>Menu</a></li>
-                <li><a>Order online</a></li>
-                <li><a>Contact</a></li>
+                <li class="border-1 border-green-500 rounded-sm">
+                  <a>Menu</a>
+                </li>
+                <li class="border-1 border-green-500 rounded-sm">
+                  <a>Order online</a>
+                </li>
+                <li class="border-1 border-green-500 rounded-sm">
+                  <a>Contact</a>
+                </li>
               </ul>
             </div>
 
-            <a class="md:text-3xl text-2xl font-bold"> Food Heaven</a>
+            <div>
+              <a class="md:text-3xl text-2xl font-bold flex gap-1 items-center"
+                ><div class="max-w-8">
+                  <img src="image copy.png" alt="" class="w-full" />
+                </div>
+                Food Heaven</a
+              >
+            </div>
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
@@ -94,12 +114,164 @@
               <li><a class="text-xl">Contact</a></li>
             </ul>
           </div>
-          <div class="navbar-end">
-            <button
-              class="btn hover:bg-amber-500 bg-red-600 text-white rounded-full px-7"
-            >
+
+          <div class="navbar-end md:flex-row">
+            <div class=""></div>
+            <div>
+              <a
+                href=""
+                class="btn hover:bg-green-100 btn-ghost text-[#1D3557] font-semibold p-3 text-lg md:text-2xl"
+                >Login/SignUp</a
+              >
+
+              <!-- Login/SignUp Modal -->
+              <!-- 🔹 Login Modal -->
+              <div
+                id="loginModal"
+                class="hidden fixed inset-0 bg-opacity-60 flex items-center justify-center z-50"
+              >
+                <div class="bg-white rounded-2xl shadow-lg w-96 p-6 relative">
+                  <!-- Close -->
+                  <button
+                    class="absolute top-3 right-4 text-gray-500 text-2xl hover:text-gray-800"
+                    id="closeLogin"
+                  >
+                    &times;
+                  </button>
+
+                  <h2
+                    class="text-2xl font-bold text-[#1D3557] mb-4 text-center"
+                  >
+                    Login
+                  </h2>
+
+                  <form class="space-y-4">
+                    <div>
+                      <label class="block text-left text-gray-600 mb-1"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        placeholder="Enter your email"
+                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1D3557]"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label class="block text-left text-gray-600 mb-1"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        placeholder="Enter your password"
+                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1D3557]"
+                        required
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="w-full bg-[#FF6600] hover:bg-[#E65C00] text-white font-semibold py-2 rounded-lg transition"
+                    >
+                      Login
+                    </button>
+
+                    <p class="text-center text-gray-600 text-sm mt-3">
+                      Don’t have an account?
+                      <a
+                        href="#"
+                        id="openSignup"
+                        class="text-[#1D3557] font-semibold hover:underline"
+                        >Sign Up</a
+                      >
+                    </p>
+                  </form>
+                </div>
+              </div>
+
+              <!-- 🔹 Sign Up Modal -->
+              <div
+                id="signupModal"
+                class="hidden fixed inset-0 bg-opacity-60 flex items-center justify-center z-50"
+              >
+                <div class="bg-white rounded-2xl shadow-lg w-96 p-6 relative">
+                  <!-- Close -->
+                  <button
+                    class="absolute top-3 right-4 text-gray-500 text-2xl hover:text-gray-800"
+                    id="closeSignup"
+                  >
+                    &times;
+                  </button>
+
+                  <h2
+                    class="text-2xl font-bold text-[#1D3557] mb-4 text-center"
+                  >
+                    Create Account
+                  </h2>
+
+                  <form class="space-y-4">
+                    <div>
+                      <label class="block text-left text-gray-600 mb-1"
+                        >Full Name</label
+                      >
+                      <input
+                        type="text"
+                        placeholder="Enter your full name"
+                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1D3557]"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label class="block text-left text-gray-600 mb-1"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        placeholder="Enter your email"
+                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1D3557]"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label class="block text-left text-gray-600 mb-1"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        placeholder="Create a password"
+                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1D3557]"
+                        required
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-2 rounded-lg transition"
+                    >
+                      Sign Up
+                    </button>
+
+                    <p class="text-center text-gray-600 text-sm mt-3">
+                      Already have an account?
+                      <a
+                        href="#"
+                        id="openLogin"
+                        class="text-blue-900 font-semibold hover:underline"
+                        >Login</a
+                      >
+                    </p>
+                  </form>
+                </div>
+              </div>
+
+              <!-- 🔹 Sign Up Modal -->
+            </div>
+            <!-- <button class="btn bg-red-600 text-white rounded-full px-7">
               Order Now
-            </button>
+            </button> -->
           </div>
         </div>
       </div>
@@ -174,7 +346,7 @@
         </div>
 
         <div>
-          <div class="container mt-10 mx-auto">
+          <div class="w-10/12 mt-10 mx-auto">
             <h2 class="border-l-3 border-red-600 font-bold text-2xl mt-2 p-2">
               Set Menu
             </h2>
@@ -196,9 +368,10 @@
                     </p>
                     <div class="card-actions justify-end">
                       <p class="font-bold text-xl text-black">
-                        200<span>Tk</span>
+                        130<span>Tk</span>
                       </p>
                       <button
+                        onclick="showAlert()"
                         class="btn bg-amber-500 font-semibold hover:text-white hover:bg-red-500"
                       >
                         Add to Cart
@@ -220,9 +393,10 @@
                     </p>
                     <div class="card-actions justify-end">
                       <p class="font-bold text-xl text-black">
-                        200<span>Tk</span>
+                        300<span>Tk</span>
                       </p>
                       <button
+                        onclick="showAlert()"
                         class="btn bg-amber-500 font-semibold hover:text-white hover:bg-red-500"
                       >
                         Add to Cart
@@ -247,6 +421,7 @@
                         200<span>Tk</span>
                       </p>
                       <button
+                        onclick="showAlert()"
                         class="btn bg-amber-500 font-semibold hover:text-white hover:bg-red-500"
                       >
                         Add to Cart
@@ -271,6 +446,7 @@
                         200<span>Tk</span>
                       </p>
                       <button
+                        onclick="showAlert()"
                         class="btn bg-amber-500 font-semibold hover:text-white hover:bg-red-500"
                       >
                         Add to Cart
@@ -284,7 +460,7 @@
         </div>
         <!-- burger  -->
         <div>
-          <div class="container mx-auto">
+          <div class="w-10/12 mx-auto">
             <h2 class="border-l-3 border-red-600 font-bold text-2xl mt-2 p-2">
               Burgers
             </h2>
@@ -309,6 +485,7 @@
                         120<span>Tk</span>
                       </p>
                       <button
+                        onclick="showAlert()"
                         class="btn bg-amber-500 font-semibold hover:text-white hover:bg-red-500"
                       >
                         Add to Cart
@@ -331,6 +508,7 @@
                         260<span>Tk</span>
                       </p>
                       <button
+                        onclick="showAlert()"
                         class="btn bg-amber-500 font-semibold hover:text-white hover:bg-red-500"
                       >
                         Add to Cart
@@ -346,15 +524,14 @@
                     <img src="./images/burger4.jpg" alt="burger1" />
                   </figure>
                   <div class="card-body">
-                    <h2 class="card-title font-bold">
-                      Beef Burger with french fries
-                    </h2>
+                    <h2 class="card-title font-bold">Beef Burger</h2>
                     <p>Juicy, flavorful burger made to satisfy every bite.</p>
                     <div class="card-actions justify-end">
                       <p class="font-bold text-xl text-black">
                         499<span>Tk</span>
                       </p>
                       <button
+                        onclick="showAlert()"
                         class="btn bg-amber-500 font-semibold hover:text-white hover:bg-red-500"
                       >
                         Add to Cart
@@ -369,155 +546,117 @@
       </section>
 
       <!-- review -->
-      <section class="mx-auto">
-        <div>
-          <h1 class="text-black text-5xl flex justify-center items-center p-7">
-            What Our Client's say
-          </h1>
-        </div>
-        <div>
-          <a class="text-black text-xl px-4 hover:underline" href="#"
-            >See more</a
-          >
-        </div>
-        <div
-          class="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 gap-11 p-5"
-        >
-          <!-- card 1 -->
-          <div class="w- h-auto p-4 rounded-lg bg-white shadow-lg">
-            <div class="flex p-4">
-              <img src="./images/icon-star.png" alt="" />
-              <img src="./images/icon-star.png" alt="" />
-              <img src="./images/icon-star.png" alt="" />
-              <img src="./images/icon-star.png" alt="" />
-              <img src="./images/icon-star.png" alt="" />
-            </div>
-            <div class="flex flex-col gap-1 m-2">
-              <h2 class="text-2xl text-red-500 font-bold">Liked by Client</h2>
-              <p class="text-gray-500">
-                I like the burger most,<br />
-                I recommend this.
+      <section class="bg-green-50 py-10">
+        <div class="w-10/12 mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center text-[#E63946] mb-8">
+            Customer Reviews
+          </h2>
+          <a class="text-lg m-3 hover:underline" href="#">more...</a>
+          <!-- Review Card -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- Single Review -->
+            <div
+              class="bg-white shadow-md rounded-xl p-5 flex flex-col space-y-3"
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                  <img
+                    src="https://i.pravatar.cc/50"
+                    alt="user"
+                    class="w-10 h-10 rounded-full border"
+                  />
+                  <div>
+                    <p class="font-semibold">John Doe</p>
+                    <p class="text-sm text-gray-500">2 days ago</p>
+                  </div>
+                </div>
+                <div class="flex text-yellow-400">⭐⭐⭐⭐☆</div>
+              </div>
+              <p class="text-gray-700">
+                The chicken burger was crispy and juicy! Loved the fries too 🍟
               </p>
             </div>
-            <div class="flex gap-3 items-center">
-              <img
-                class="rounded-full"
-                src="./images/avatar - Copy.png"
-                alt=""
-              />
-              <div class="">
-                <h2>Anvi Rahman</h2>
-                <p class="text-gray-400">22 March, 2025</p>
+
+            <!-- Another Review -->
+            <div
+              class="bg-white shadow-md rounded-xl p-5 flex flex-col space-y-3"
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                  <img
+                    src="https://i.pravatar.cc/51"
+                    alt="user"
+                    class="w-10 h-10 rounded-full border"
+                  />
+                  <div>
+                    <p class="font-semibold">Sarah Lee</p>
+                    <p class="text-sm text-gray-500">5 days ago</p>
+                  </div>
+                </div>
+                <div class="flex text-yellow-400">⭐⭐⭐⭐⭐</div>
               </div>
-              <i class="fa-regular fa-heart"></i>
+              <p class="text-gray-700">
+                Best pizza I've had in a while 🍕🔥 Highly recommend the spicy
+                combo!
+              </p>
             </div>
           </div>
-          <!-- card 2 -->
-          <div class="w-full h-auto p-4 rounded-lg bg-white shadow-lg">
-            <div class="flex p-4">
-              <img src="./images/icon-star.png" alt="" />
-              <img src="./images/icon-star.png" alt="" />
-              <img src="./images/icon-star.png" alt="" />
-              <img src="./images/icon-star.png" alt="" />
-              <img src="./images/icon-star.png" alt="" />
-            </div>
-            <div class="flex flex-col gap-1 m-2">
-              <h2 class="text-2xl text-red-500 font-bold">Liked by Client</h2>
-              <p class="text-gray-500">
-                I like the cappuccino most,<br />
-                I recommend this.
-              </p>
-            </div>
-            <div class="flex gap-3 items-center">
-              <img
-                class="rounded-full"
-                src="./images/avatar - Copy.png"
-                alt=""
-              />
-              <div class="">
-                <h2>Anvi Rahman</h2>
-                <p class="text-gray-400">22 March, 2025</p>
+
+          <!-- Add Review Form -->
+          <div class="mt-10 bg-[#F1FAEE] shadow-lg rounded-xl p-6">
+            <h3 class="text-xl font-semibold mb-4 text-[#1D3557]">
+              Write a Review
+            </h3>
+            <form class="space-y-4">
+              <div>
+                <label class="block font-medium mb-1">Your Name</label>
+                <input
+                  type="text"
+                  class="input input-bordered w-full"
+                  placeholder="Enter your name"
+                />
               </div>
-              <i class="fa-regular fa-heart"></i>
-            </div>
-          </div>
-          <!-- card 3 -->
-          <div class="w-full h-auto p-4 rounded-lg bg-white shadow-lg">
-            <div class="flex p-4">
-              <img src="./images/icon-star.png" alt="" />
-              <img src="./images/icon-star.png" alt="" />
-              <img src="./images/icon-star.png" alt="" />
-              <img src="./images/icon-star.png" alt="" />
-              <img src="./images/icon-star.png" alt="" />
-            </div>
-            <div class="flex flex-col gap-1 m-2">
-              <h2 class="text-2xl text-red-500 font-bold">Liked by Client</h2>
-              <p class="text-gray-500">
-                I like the cappuccino most,<br />
-                I recommend this.
-              </p>
-            </div>
-            <div class="flex gap-3 items-center">
-              <img
-                class="rounded-full"
-                src="./images/avatar - Copy.png"
-                alt=""
-              />
-              <div class="">
-                <h2>Pushpa Talukder</h2>
-                <p class="text-gray-400">30 July, 2025</p>
+              <div>
+                <label class="block font-medium mb-1">Your Rating</label>
+                <select class="select select-bordered w-full">
+                  <option disabled selected>Choose rating</option>
+                  <option>⭐ 1</option>
+                  <option>⭐⭐ 2</option>
+                  <option>⭐⭐⭐ 3</option>
+                  <option>⭐⭐⭐⭐ 4</option>
+                  <option>⭐⭐⭐⭐⭐ 5</option>
+                </select>
               </div>
-              <i class="fa-regular fa-heart"></i>
-            </div>
-          </div>
-          <!-- card 4 -->
-          <div class="w-full h-auto p-4 rounded-lg bg-white shadow-lg">
-            <div class="flex p-4">
-              <img src="./images/icon-star.png" alt="" />
-              <img src="./images/icon-star.png" alt="" />
-              <img src="./images/icon-star.png" alt="" />
-              <img src="./images/icon-star.png" alt="" />
-              <img src="./images/icon-star.png" alt="" />
-            </div>
-            <div class="flex flex-col gap-1 m-2">
-              <h2 class="text-2xl text-red-500 font-bold">Liked by Client</h2>
-              <p class="text-gray-500">
-                I like the cappuccino most,<br />
-                I recommend this.
-              </p>
-            </div>
-            <div class="flex gap-3 items-center">
-              <img
-                class="rounded-full"
-                src="./images/avatar - Copy.png"
-                alt=""
-              />
-              <div class="">
-                <h2>Lamiya Hossain</h2>
-                <p class="text-gray-400">22 May, 2025</p>
+              <div>
+                <label class="block font-medium mb-1">Your Review</label>
+                <textarea
+                  class="textarea textarea-bordered w-full"
+                  placeholder="Share your experience..."
+                ></textarea>
               </div>
-              <i class="fa-regular fa-heart"></i>
-            </div>
+              <button
+                type="submit"
+                class="btn bg-[#E63946] text-white hover:bg-[#d62828]"
+              >
+                Submit Review
+              </button>
+            </form>
           </div>
         </div>
       </section>
     </main>
-    <footer class="sm:footer-horizontal bg-blue-950 text-base-content p-10">
-      <div class="flex gap-3 justify-center items-center">
-        <nav>
-          <a class="link link-hover text-2xl text-green-100 font-semibold"
-            >Privacy Policy</a
-          >
-        </nav>
-        <nav>
-          <a class="link link-hover text-2xl text-green-100 font-semibold"
-            >Terms of Service</a
-          >
-        </nav>
-        <nav>
-          <a class="link link-hover text-2xl text-green-100 font-semibold"
-            >Contact us</a
-          >
+    <footer
+      class="sm:footer-horizontal bg-blue-950 text-base-content p-10 pb-36 md:pb-10"
+    >
+      <div>
+        <nav
+          class="flex gap-4 justify-center items-center text-sm md:text-lg text-green-100 font-semibold"
+        >
+          <a class="link link-hover cursor-pointer">Privacy Policy</a>
+
+          <a class="link link-hover cursor-pointer">Terms of Service</a>
+
+          <a class="link link-hover cursor-pointer">Contact us</a>
         </nav>
       </div>
       <nav>
@@ -564,10 +703,13 @@
         </div>
         <aside>
           <p class="text-green-100 flex justify-center items-center">
-            Copyright © - All right reserved by Food Heaven
+            Copyright © 2025 - All right reserved by Food Heaven
           </p>
         </aside>
       </nav>
     </footer>
+
+    <!--  -->
+    <script src="./index.js"></script>
   </body>
 </html>
