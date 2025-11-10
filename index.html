@@ -128,9 +128,11 @@
               <!-- 🔹 Login Modal -->
               <div
                 id="loginModal"
-                class="hidden fixed inset-0 bg-opacity-60 flex items-center justify-center z-50"
+                class="hidden fixed inset-0 bg-green-50 bg-opacity-60 flex items-center justify-center z-50"
               >
-                <div class="bg-white rounded-2xl shadow-lg w-96 p-6 relative">
+                <div
+                  class="bg-white mx-5 rounded-2xl shadow-xl w-96 p-6 relative"
+                >
                   <!-- Close -->
                   <button
                     class="absolute top-3 right-4 text-gray-500 text-2xl hover:text-gray-800"
@@ -142,7 +144,7 @@
                   <h2
                     class="text-2xl font-bold text-[#1D3557] mb-4 text-center"
                   >
-                    Login
+                    Welcome Back!
                   </h2>
 
                   <form class="space-y-4">
@@ -153,7 +155,7 @@
                       <input
                         type="email"
                         placeholder="Enter your email"
-                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1D3557]"
+                        class="w-full bg-green-50 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1D3557]"
                         required
                       />
                     </div>
@@ -165,9 +167,12 @@
                       <input
                         type="password"
                         placeholder="Enter your password"
-                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1D3557]"
+                        class="w-full bg-green-50 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1D3557]"
                         required
                       />
+                      <p class="text-right text-sm mt-1 hover:underline">
+                        Forgot password?
+                      </p>
                     </div>
 
                     <button
@@ -193,9 +198,11 @@
               <!-- 🔹 Sign Up Modal -->
               <div
                 id="signupModal"
-                class="hidden fixed inset-0 bg-opacity-60 flex items-center justify-center z-50"
+                class="hidden fixed bg-green-50 inset-0 bg-opacity-60 flex items-center justify-center z-50"
               >
-                <div class="bg-white rounded-2xl shadow-lg w-96 p-6 relative">
+                <div
+                  class="bg-white rounded-2xl mx-5 shadow-lg w-96 p-6 relative"
+                >
                   <!-- Close -->
                   <button
                     class="absolute top-3 right-4 text-gray-500 text-2xl hover:text-gray-800"
@@ -218,7 +225,7 @@
                       <input
                         type="text"
                         placeholder="Enter your full name"
-                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1D3557]"
+                        class="w-full bg-green-50 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1D3557]"
                         required
                       />
                     </div>
@@ -230,7 +237,7 @@
                       <input
                         type="email"
                         placeholder="Enter your email"
-                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1D3557]"
+                        class="bg-green-50 w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1D3557]"
                         required
                       />
                     </div>
@@ -242,7 +249,7 @@
                       <input
                         type="password"
                         placeholder="Create a password"
-                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1D3557]"
+                        class="bg-green-50 w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1D3557]"
                         required
                       />
                     </div>
@@ -702,7 +709,7 @@
           </a>
         </div>
         <aside>
-          <p class="text-green-100 flex justify-center items-center">
+          <p class="text-green-100 text-sm flex justify-center items-center">
             Copyright © 2025 - All right reserved by Food Heaven
           </p>
         </aside>
